@@ -38,11 +38,16 @@ COCKTAILS.put('/:id', (req, res) => {
     })
 });
 
+// curl -X DELETE 'http://localhost:3003/cocktails/604fbaa2f60d3cb2f955b5ce'
+// Delete
+COCKTAILS.delete('/:id', (req, res) => {
+    Cocktail.findByIdAndRemove(req.params.id, (err, deletedCocktail) => {
+        if (err) {
+            res.status(400).json({ error: err.message });
+        }
 
-
-
-
-
-
+        res.status(200).json(deletedCocktail);
+    });
+});
 
 module.exports = COCKTAILS
