@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const cocktailSchema = mongoose.Schema({
-    name: { type: String, required: true },
-    image: { type: String, required: true },
-    recipe: { type: String, required: true },
-    instructions: { type: String, required: true },
+    name: { type: String },
+    image: { type: String },
+    recipe: { type: String },
+    instructions: { type: String },
     drinkId: String,
 
 });

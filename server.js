@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const cocktailsController = require('./controllers/cocktails')
+const cocktailsController = require('./controllers/cocktails');
 const APP = express();
 const PORT = 3003;
 const DBNAME = 'cocktails';
