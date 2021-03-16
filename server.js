@@ -19,14 +19,16 @@ const corsOptions = {
         } else {
             callback(new Error('Not allowed by CORS'))
         }
+    }
+}
 
 
-        APP.use(cors(corsOptions));
+APP.use(cors(corsOptions));
 
-        APP.use(express.json());
+APP.use(express.json());
 
-        APP.use('/cocktails', cocktailsController)
+APP.use('/cocktails', cocktailsController)
 
-        APP.listen(PORT, () => {
-            console.log("listening on port: ", PORT)
-        })
+APP.listen(PORT, () => {
+    console.log("listening on port: ", PORT)
+})
