@@ -24,6 +24,8 @@ const corsOptions = {
 
 APP.use(cors(corsOptions));
 
+APP.use(cors(corsOptions));
+
 APP.use(express.json());
 
 APP.use('/cocktails', cocktailsController)
