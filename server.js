@@ -11,6 +11,8 @@ mongoose.connect(`mongodb://localhost:27017/${DBNAME}`, { useNewUrlParser: true 
 mongoose.connection.once('open', () => {
     console.log('connected to mongoose...');
 });
+
+
 const whitelist = ['http://localhost:3000']
 const corsOptions = {
     origin: function (origin, callback) {
