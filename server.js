@@ -24,7 +24,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 db.on('open', () => { });
 
 
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3000', 'https://frontend-cocktails.herokuapp.com']
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
